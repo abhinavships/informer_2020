@@ -17,32 +17,32 @@ import numpy as np
 
 W_numpy = W_query.detach().numpy()
 U, S, Vh = np.linalg.svd(W_numpy)
-# print(S)
+print(S)
 
 V_numpy = V_query.detach().numpy()
 Ui, Si , Vhi = np.linalg.svd(V_numpy)
-# print(Si)
+print(Si)
 
 
 
 import matplotlib.pyplot as plt
 
-# plt.figure()
-# plt.plot(S)
-# plt.xlabel('Index')
-# plt.ylabel('Singular Value')
-# plt.title('Singular Value Spectrum - Query Projection - Encoder Layer 0')
-# plt.savefig('sv_spectrum_query.png')
-# plt.show()
+plt.figure()
+plt.plot(S)
+plt.xlabel('Index')
+plt.ylabel('Singular Value')
+plt.title('Singular Value Spectrum - Query Projection - Encoder Layer 0')
+plt.savefig('sv_spectrum_query.png')
+plt.show()
 
 
-# plt.figure()
-# plt.plot(Si)
-# plt.xlabel('Index')
-# plt.ylabel('Singular Value')
-# plt.title('Singular Value Spectrum - Value Projection - Encoder Layer 0')
-# plt.savefig('sv_spectrum_value.png')
-# plt.show()
+plt.figure()
+plt.plot(Si)
+plt.xlabel('Index')
+plt.ylabel('Singular Value')
+plt.title('Singular Value Spectrum - Value Projection - Encoder Layer 0')
+plt.savefig('sv_spectrum_value.png')
+plt.show()
 
 
 ## this is initial analysis before training so theres no pattern in singular valyes just dropping normally as expected 
@@ -55,10 +55,10 @@ import weightwatcher as ww
 
 watcher = ww.WeightWatcher(model)
 results = watcher.analyze()
-# print(results)
+print(results)
 
 
 print(results.columns.tolist())
 print(results[['name', 'alpha', 'alpha_weighted']].to_string())
-
+#exporting csv
 results.to_csv('weightwatcher_results.csv')
