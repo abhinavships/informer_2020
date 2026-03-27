@@ -7,6 +7,38 @@ task to be done :
 
 this can be done with the help of weightwatcher 
 
+
+explaining the importance of weighwatcher is bascially extract wieghts 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 exact understanding 
 informer : some niche version of transformer where probsparse attention mech is used 
 weight watcher : comparing power law based alpha showing bulk and singular values as well as the models performance without actually training it 
