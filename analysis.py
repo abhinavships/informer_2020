@@ -9,12 +9,19 @@ print(model)
 W_query = model.encoder.attn_layers[0].attention.query_projection.weight
 print(W_query.shape)
 
+V_query = model.encoder.attn_layers[0].attention.value_projection.weight
+print(V_query.shape)
+
 
 import numpy as np
 
 W_numpy = W_query.detach().numpy()
 U, S, Vh = np.linalg.svd(W_numpy)
 print(S)
+
+V_numpy = V_query.detach().numpy()
+Ui, Si , Vhi = np.linalg.svd(V_numpy)
+print(Si)
 
 
 
@@ -29,4 +36,14 @@ plt.savefig('sv_spectrum_query.png')
 plt.show()
 
 
+plt.figure()
+plt.plot(Si)
+plt.xlabel('Index')
+plt.ylabel('Singular Value')
+plt.title('Singular Value Spectrum - Value Projection - Encoder Layer 0')
+plt.savefig('sv_spectrum_value.png')
+plt.show()
 
+
+## this is initial analysis before training so theres no pattern in singular valyes just dropping normally as expected 
+#grap actually confirms the model is untrained 
