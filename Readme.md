@@ -5,8 +5,12 @@ task to be done :
 
 # load informer model --> take 1 layer --> take its weight matrix --> get singular values and plot them 
 
-this can be done with the help of weightwatcher 
+### this can be done with the help of weightwatcher 
+
+
 ![idk excalidraw](images/sv_spectrum_query.png)
+
+![idk excalidraw](images/sv_spectrum_value.png)
 
 
 explaining the importance of weighwatcher is bascially extract wieghts 
