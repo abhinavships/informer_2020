@@ -6,7 +6,7 @@ task to be done :
 # load informer model --> take 1 layer --> take its weight matrix --> get singular values and plot them 
 
 this can be done with the help of weightwatcher 
-![idk excalidraw](/Users/abhinavsden/Downloads/informer_2020/Screenshot 2026-03-27 at 12.42.55 AM.png)
+![idk excalidraw](Screenshot 2026-03-27 at 12.42.55 AM.png)
 
 
 explaining the importance of weighwatcher is bascially extract wieghts 
